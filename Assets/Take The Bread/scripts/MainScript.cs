@@ -19,6 +19,8 @@ public class MainScript : MonoBehaviour {
     public GameObject spinButton;
         int clevel;
 
+    private GameObject winPartical;
+
         void Start () {
         //PlayerPrefs.DeleteAll();
         if (PlayerPrefs.GetInt("adFree",0)!=0)
@@ -32,7 +34,7 @@ public class MainScript : MonoBehaviour {
         inter = GetComponent<InterstitialAdScript>();
         reinter = GetComponent<ReInterstitialScript>();
         StartCoroutine("waitAsecond");
-
+        Time.timeScale = 0;
 		}
 
 		IEnumerator waitAsecond(){
@@ -73,7 +75,7 @@ public class MainScript : MonoBehaviour {
 				
 				GameData.getInstance ().cLevel = clevel;
 
-				txtLevel.text = Localization.Instance.GetString ("levelname" + clevel);
+				//txtLevel.text = Localization.Instance.GetString ("levelname" + clevel);
 
 
 				fadeOut ();
@@ -129,7 +131,7 @@ public class MainScript : MonoBehaviour {
 				gameContainer = GameObject.Find("gameContainer");
 				GameData.getInstance ().coin = PlayerPrefs.GetInt ("coin");
 
-				Localization.Instance.SetLanguage (GameData.getInstance().GetSystemLaguage());
+				//Localization.Instance.SetLanguage (GameData.getInstance().GetSystemLaguage());
 
 		}
         
@@ -140,8 +142,11 @@ public class MainScript : MonoBehaviour {
 				if (GameData.getInstance ().isFail)
 						return;
 				GameData.getInstance ().lockGame(true,false);
-				GameManager.getInstance ().playSfx ("applaud"); 
-                Instantiate(Resources.Load("P_Confetti") as GameObject);
+				GameManager.getInstance ().playSfx ("applaud");
+        if (winPartical == null)
+        {
+            winPartical = Instantiate(Resources.Load("P_Confetti") as GameObject);
+        }      
                 StartCoroutine ("win");
                 
     }
@@ -480,7 +485,8 @@ public class MainScript : MonoBehaviour {
                 }
                 else
                 {
-                    reinter.showAd();
+                    fadeIn(SceneManager.GetActiveScene().name);
+                    //reinter.showAd();
                 }
 
                 break;

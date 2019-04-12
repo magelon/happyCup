@@ -14,4 +14,11 @@ public class cupFillState : MonoBehaviour
     {
         time = 0;
     }
+
+    private void Update()
+    {
+        if (time > 1000){
+        GameData.getInstance().main.gameWin();
+        }
+    }
 }

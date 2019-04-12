@@ -7,6 +7,11 @@ public class LineCreator : MonoBehaviour
     private GameObject lineGo;
     DrawLineWithCollider activeLine;
 
+    private void Start()
+    {
+        Time.timeScale = 0;
+    }
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -19,6 +24,7 @@ public class LineCreator : MonoBehaviour
         {
             activeLine = null;
             lineGo.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            Time.timeScale = 1;
         }
 
         if (activeLine != null)

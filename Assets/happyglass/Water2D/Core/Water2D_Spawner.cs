@@ -124,9 +124,11 @@
 
 		void Start()
 		{
-			//Application.targetFrameRate = 60;
+            if (instance == null)
+                instance = this;
+            //Application.targetFrameRate = 60;
 
-			_parent = new GameObject ("_metaBalls");
+            _parent = new GameObject ("_metaBalls");
 			_parent.hideFlags = HideFlags.HideInHierarchy;
 			WaterDropsObjects [0].transform.SetParent (_parent.transform);
 			WaterDropsObjects [0].transform.localScale = new Vector3 (size, size, 1f);
