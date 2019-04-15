@@ -142,9 +142,11 @@ public class MainScript : MonoBehaviour {
 				if (GameData.getInstance ().isFail)
 						return;
 				GameData.getInstance ().lockGame(true,false);
-				GameManager.getInstance ().playSfx ("applaud");
+
+				
         if (winPartical == null)
         {
+            GameManager.getInstance().playSfx("applaud");
             winPartical = Instantiate(Resources.Load("P_Confetti") as GameObject);
         }      
                 StartCoroutine ("win");

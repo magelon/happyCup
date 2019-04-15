@@ -5,9 +5,16 @@ using UnityEngine;
 public class cupFillState : MonoBehaviour
 {
     public float time;
+    public GameObject sad;
+    public GameObject happy;
+
     void OnTriggerStay2D(Collider2D other)
     {
-        time += Time.time;
+        if (other.name.ToString().Substring(0, 4) == "Drop")
+        {
+            time += Time.time;
+        }
+        
     }
 
     void OnTriggerExit2D(Collider2D other)
@@ -19,6 +26,8 @@ public class cupFillState : MonoBehaviour
     {
         if (time > 1000){
         GameData.getInstance().main.gameWin();
+            sad.SetActive(false);
+            happy.SetActive(true);
         }
     }
 }
