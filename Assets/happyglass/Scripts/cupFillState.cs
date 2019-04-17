@@ -24,10 +24,15 @@ public class cupFillState : MonoBehaviour
 
     private void Update()
     {
-        if (time > 1000){
-        GameData.getInstance().main.gameWin();
+        if (time > 1000)
+        {
+            if (GameData.getInstance().isLock)//If the game locked,you can not control the game.
+                return;
             sad.SetActive(false);
             happy.SetActive(true);
+            GameData.getInstance().main.gameWin();
+
+            }
         }
-    }
+
 }

@@ -138,7 +138,8 @@
 
 			for (int i = 1; i < WaterDropsObjects.Length; i++) {
 				WaterDropsObjects[i] = Instantiate(WaterDropsObjects[0], gameObject.transform.position, new Quaternion(0,0,0,0)) as GameObject;
-				WaterDropsObjects [i].GetComponent<MetaballParticleClass>().Active = false;
+				
+                WaterDropsObjects [i].GetComponent<MetaballParticleClass>().Active = false;
 				WaterDropsObjects [i].transform.SetParent (_parent.transform);
 				WaterDropsObjects [i].transform.localScale = new Vector3 (size, size, 1f);
 			}
