@@ -15,7 +15,8 @@ public class MainScript : MonoBehaviour {
     private int adFree=0;
 		//data
 		public int timeCount = 0;
-		public Text txtCoin;public Text txtLevel;
+		public Text txtCoin;
+    public Text txtLevel;
     public GameObject spinButton;
         int clevel;
 
@@ -60,11 +61,8 @@ public class MainScript : MonoBehaviour {
 		public GameObject panelBuyCoin;//panle instance for buy coin
 		void initView(){
 				GameData.lastWindow = "game";
-
-
-
-        string levelname = SceneManager.GetActiveScene().name;// Application.loadedLevelName;
-        if (levelname == "ShopMenu")
+                string levelname = SceneManager.GetActiveScene().name;// Application.loadedLevelName;
+                if (levelname == "ShopMenu")
         {
             clevel = 999999;
         }
@@ -76,9 +74,9 @@ public class MainScript : MonoBehaviour {
 				GameData.getInstance ().cLevel = clevel;
 
 				//txtLevel.text = Localization.Instance.GetString ("levelname" + clevel);
+        txtLevel.text = "level" + clevel;
 
-
-				fadeOut ();
+        fadeOut ();
 
 
 				GameObject panelBuyCoinC = GameObject.Find ("PanelBuyCoinsC");
