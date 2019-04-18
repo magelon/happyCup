@@ -11,7 +11,7 @@ public class MainScript : MonoBehaviour {
     private rewardVideo rv;
     private InterstitialAdScript inter;
     private ReInterstitialScript reinter;
-      private bool intershowed;
+    private bool intershowed;
     private int adFree=0;
 		//data
 		public int timeCount = 0;

@@ -15,7 +15,7 @@ public class StartSplash : MonoBehaviour {
 
 
 
-        SceneManager.LoadScene("mainMenu");
+        SceneManager.LoadScene("DB");
 	}
 	
 
