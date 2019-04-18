@@ -2798,7 +2798,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -29.999939, y: 0}
+  m_AnchoredPosition: {x: -30, y: 0}
   m_SizeDelta: {x: 60, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1680512215
@@ -9201,7 +9201,7 @@ MonoBehaviour:
   txtCoin: {fileID: 114200200223601987}
   txtLevel: {fileID: 114956951888211733}
   spinButton: {fileID: 797085182}
-  panelDisplayTip: {fileID: 0}
+  panelDisplayTip: {fileID: 114682166984736841}
   panelAskTip: {fileID: 1000011321318197}
   panelAskSkip: {fileID: 1000010832825357}
   panelNotEnough: {fileID: 1000013270151337}

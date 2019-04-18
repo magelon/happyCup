@@ -27,10 +27,7 @@ public class ShopMenu : MonoBehaviour {
 				}
 		}
 
-    void nEnable()
-    {
-
-    }
+  
 
 		bool isMoving = false;
 		public void move(float dis){

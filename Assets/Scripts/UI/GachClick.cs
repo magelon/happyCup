@@ -14,7 +14,6 @@ public class GachClick : MonoBehaviour
         Debug.Log("want a spin?");
     }
 
-
     public void OnClick(GameObject g)
     {
         if(g.transform.Find("lock").GetComponent<Image>().enabled == false)
