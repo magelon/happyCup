@@ -62,4 +62,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Take The Bread/GameLevel/cutLevels/level15.unity
     guid: 01851933741c34866bef507b629f5deb
+  - enabled: 1
+    path: Assets/Take The Bread/GameLevel/cutLevels/level16.unity
+    guid: 04726d92fa6a545afad6d12e7feb4dd7
+  - enabled: 1
+    path: Assets/Take The Bread/GameLevel/cutLevels/level17.unity
+    guid: 9f42a600d2ae04cb3a921d59ed78b103
+  - enabled: 1
+    path: Assets/Take The Bread/GameLevel/cutLevels/level18.unity
+    guid: aba9d988bb6d149d2bc0dd16beab79eb
+  - enabled: 1
+    path: Assets/Take The Bread/GameLevel/cutLevels/level19.unity
+    guid: 825f03d9251764d2189ff131a5670d36
   m_configObjects: {}
