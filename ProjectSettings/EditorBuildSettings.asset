@@ -77,4 +77,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Take The Bread/GameLevel/cutLevels/level19.unity
     guid: 825f03d9251764d2189ff131a5670d36
+  - enabled: 1
+    path: Assets/Take The Bread/GameLevel/cutLevels/level20.unity
+    guid: b9aeaa65265ad4da1bb73a32be5c8914
   m_configObjects: {}

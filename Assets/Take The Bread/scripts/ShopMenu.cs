@@ -308,6 +308,7 @@ public class ShopMenu : MonoBehaviour {
 		/// </summary>
 		public void backMain(){
 				GameManager.getInstance ().playSfx ("click");
+                
 				fadeIn ("MainMenu");
 		}
 

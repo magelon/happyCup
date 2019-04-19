@@ -120,7 +120,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 0.13
+  bundleVersion: 0.14
   preloadedAssets: []
   metroInputSource: 1
   wsaTransparentSwapchain: 0
@@ -162,7 +162,7 @@ PlayerSettings:
     tvOS: com.hitcode.takethebread
   buildNumber:
     iOS: 0
-  AndroidBundleVersionCode: 3
+  AndroidBundleVersionCode: 4
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1

@@ -29,7 +29,7 @@ public class PanelMain : MonoBehaviour {
 
 		// Update is called once per frame
 		void Update () {
-			
+            Time.timeScale = 1;
 		}
 		public GameObject panelShop,panelFade;
 		/// <summary>
