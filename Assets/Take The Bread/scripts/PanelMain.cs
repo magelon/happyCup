@@ -13,8 +13,8 @@ public class PanelMain : MonoBehaviour {
 		// Use this for initialization
 		void Start () {
         //PlayerPrefs.DeleteAll();
-				GameManager.getInstance ().init ();
-
+        GameManager.getInstance().init();
+ 
 				fadeOut ();
 
 
@@ -128,21 +128,21 @@ public class PanelMain : MonoBehaviour {
 
 
 		void fadeOut(){
-				//mask.gameObject.SetActive (true);
-				//mask.color = Color.black;
+				mask.gameObject.SetActive (true);
+				mask.color = Color.black;
 
-				//ATween.ValueTo (mask.gameObject, ATween.Hash ("from", 1, "to", 0, "time", 1, "onupdate", "OnUpdateTween", "onupdatetarget", this.gameObject, "oncomplete", "fadeOutOver","oncompletetarget",this.gameObject));
+				ATween.ValueTo (mask.gameObject, ATween.Hash ("from", 1, "to", 0, "time", 1, "onupdate", "OnUpdateTween", "onupdatetarget", this.gameObject, "oncomplete", "fadeOutOver","oncompletetarget",this.gameObject));
 
 		}
 
 		void fadeIn(string sceneName){
 
-        // if (mask.IsActive())
-        //	return;
-        //mask.gameObject.SetActive (true);
-        //mask.color = new Color(0,0,0,0);
-        SceneManager.LoadScene(sceneName);
-        //ATween.ValueTo (mask.gameObject, ATween.Hash ("from", 0, "to", 1, "time", 1, "onupdate", "OnUpdateTween", "onupdatetarget", this.gameObject, "oncomplete", "fadeInOver", "oncompleteparams", sceneName,"oncompletetarget",this.gameObject));
+         if (mask.IsActive())
+        	return;
+        mask.gameObject.SetActive (true);
+        mask.color = new Color(0,0,0,0);
+        //SceneManager.LoadScene(sceneName);
+        ATween.ValueTo (mask.gameObject, ATween.Hash ("from", 0, "to", 1, "time", 1, "onupdate", "OnUpdateTween", "onupdatetarget", this.gameObject, "oncomplete", "fadeInOver", "oncompleteparams", sceneName,"oncompletetarget",this.gameObject));
 
     }
 
@@ -152,7 +152,7 @@ public class PanelMain : MonoBehaviour {
 		}
 
 		void fadeOutOver(){
-				//mask.gameObject.SetActive (false);
+				mask.gameObject.SetActive (false);
 		}
 
 		/// <summary>
@@ -163,6 +163,6 @@ public class PanelMain : MonoBehaviour {
 
 		{
 
-				//mask.color = new Color(0,0,0,value);
+				mask.color = new Color(0,0,0,value);
 		}
 }

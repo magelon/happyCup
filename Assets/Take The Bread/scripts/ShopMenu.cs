@@ -13,10 +13,17 @@ public class ShopMenu : MonoBehaviour {
 		GameObject listItemg;
 		GameObject mainContainer;
 		List<GameObject> groups;
-		void Start () {
+
+    private void Awake()
+    {
+        GameData.getInstance().resetData();
+        GameManager.getInstance().init();
+       
+    }
+
+    void Start () {
                  
-				GameManager.getInstance ().init();
-				GameData.getInstance ().resetData();
+				
         initView();
         Localization.Instance.SetLanguage (GameData.getInstance().GetSystemLaguage());
 				

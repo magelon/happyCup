@@ -66,7 +66,8 @@ public class GameData  {
 
 		public void resetData(){
 
-				islock = false;
+                itemLock = new List<int>();
+                islock = false;
 
 				isWin = false;
 				isFail = false;
