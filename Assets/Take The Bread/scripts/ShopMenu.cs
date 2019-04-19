@@ -17,9 +17,9 @@ public class ShopMenu : MonoBehaviour {
                  
 				GameManager.getInstance ().init();
 				GameData.getInstance ().resetData();
-
-				Localization.Instance.SetLanguage (GameData.getInstance().GetSystemLaguage());
-				initView ();
+        initView();
+        Localization.Instance.SetLanguage (GameData.getInstance().GetSystemLaguage());
+				
 				mainContainer = GameObject.Find ("mainContainer");
 				groups = new List<GameObject>();
 				foreach (Transform group_ in mainContainer.transform) {
