@@ -141,8 +141,8 @@ public class PanelMain : MonoBehaviour {
         	return;
         mask.gameObject.SetActive (true);
         mask.color = new Color(0,0,0,0);
-        //SceneManager.LoadScene(sceneName);
-        ATween.ValueTo (mask.gameObject, ATween.Hash ("from", 0, "to", 1, "time", 1, "onupdate", "OnUpdateTween", "onupdatetarget", this.gameObject, "oncomplete", "fadeInOver", "oncompleteparams", sceneName,"oncompletetarget",this.gameObject));
+        SceneManager.LoadScene(sceneName);
+        ATween.ValueTo (mask.gameObject, ATween.Hash ("ignoretimescale", true,"from", 0, "to",1, "time",1, "onupdate", "OnUpdateTween", "onupdatetarget", this.gameObject, "oncomplete", "fadeInOver", "oncompleteparams", sceneName,"oncompletetarget",this.gameObject));
 
     }
 
