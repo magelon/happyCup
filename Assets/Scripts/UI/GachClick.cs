@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class GachClick : MonoBehaviour
 {
-    private bool equipted=true;
+    private bool equipted;
     public static GameObject current;
     //public GameObject tick;
     public void OnPointerClick(PointerEventData eventData)
@@ -47,10 +47,9 @@ public class GachClick : MonoBehaviour
        
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (current==transform.gameObject&&equipted)
+        if (current==transform.gameObject&&!equipted)
         {
             current.transform.Find("tick").GetComponent<Image>().enabled = true;
         }
