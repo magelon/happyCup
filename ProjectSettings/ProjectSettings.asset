@@ -250,10 +250,9 @@ PlayerSettings:
   AndroidTargetArchitectures: 5
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: /Users/firoprochainezo/Documents/cut-squad-2d/Assets/Take The
-    Bread/GameLevel/cutLevels/cut-release-key.keystore
+  AndroidKeystoreName: D:/unity/projects/cut squad 2d/Assets/Take The Bread/GameLevel/cutLevels/cut-release-key.keystore
   AndroidKeyaliasName: cut
-  AndroidBuildApkPerCpuArchitecture: 0
+  AndroidBuildApkPerCpuArchitecture: 1
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
   AndroidEnableTango: 0
